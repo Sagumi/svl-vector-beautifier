@@ -1,4 +1,4 @@
-type IndentationType = 'space' | 'tab';
+export type IndentationType = 'space' | 'tab';
 type TokenDescription = { token: string, index: number, indentLevel: number };
 
 const isEmptyVector = (token: string, index: number, text: string): boolean => {

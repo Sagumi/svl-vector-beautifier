@@ -12,6 +12,27 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "SVL Vector Beautifier",
+      "properties": {
+        "svlVectorBeautifier.indentationCharacter": {
+          "type": "string",
+          "enum": [
+            "spaces",
+            "tabs"
+          ],
+          "description": "Use tabs or spaces to indent",
+          "default": "spaces",
+          "order": 1
+        },
+        "svlVectorBeautifier.indentationIncrement": {
+          "type": "number",
+          "description": "Number of indentation character to use for each indentation level",
+          "default": 2,
+          "order": 2
+        }
+      }
+    },
     "menus": {
       "editor/title": [
         {

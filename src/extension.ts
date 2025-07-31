@@ -2,20 +2,20 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import BeautifyVector from './beautifyVector';
+import { IndentationType } from './parser';
+
+type TIndentationCharacter = IndentationType | undefined;
+type TIndentationIncrement = number | undefined;
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-	// context.subscriptions.push(VectorEditor.register(context));
-
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
 	const disposable = vscode.commands.registerCommand('svl-vector-beautifier.beautify', () => {
-		BeautifyVector.beautify();
+		const config = vscode.workspace.getConfiguration('svlVectorBeautifier');
+		const indentationCharacter: TIndentationCharacter = config.get('indentationCharacter');
+		const indentationIncrement: TIndentationIncrement = config.get('indentationIncrement');
+
+		BeautifyVector.beautify(indentationIncrement, indentationCharacter);
 	});
 
 	context.subscriptions.push(disposable);
