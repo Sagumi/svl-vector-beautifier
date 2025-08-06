@@ -1,0 +1,1 @@
+[ [ [ metadata:[ filePath:'C:/Users/somePath', type:PCR, slopes:[-0.0538782,-0.0136052,0.0228178,0.0924739,-0.0182034], descriptor:['a_acc','a_don','SlogP','SMR','TPSA'] ], model:[ [ descriptor:[ classe:'', code:'a_acc', description:'' ] ] ] ] ] ]

@@ -9,6 +9,7 @@
   "categories": [
     "Other"
   ],
+  "type": "commonjs",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
@@ -21,7 +22,7 @@
             "spaces",
             "tabs"
           ],
-          "description": "Use tabs or spaces to indent",
+          "description": "Use tabs or spaces to indent. Keep in mind that VS Code can automatically replace tabs with spaces",
           "default": "spaces",
           "order": 1
         },
@@ -54,19 +55,24 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "test": "jest . --verbose"
   },
   "devDependencies": {
-    "@types/vscode": "^1.102.0",
+    "@jest/globals": "^30.0.5",
+    "@types/jest": "^30.0.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "20.x",
+    "@types/vscode": "^1.102.0",
     "@typescript-eslint/eslint-plugin": "^8.31.1",
     "@typescript-eslint/parser": "^8.31.1",
-    "eslint": "^9.25.1",
-    "typescript": "^5.8.3",
     "@vscode/test-cli": "^0.0.11",
-    "@vscode/test-electron": "^2.5.2"
+    "@vscode/test-electron": "^2.5.2",
+    "babel-jest": "^30.0.5",
+    "eslint": "^9.25.1",
+    "jest": "^30.0.5",
+    "ts-jest": "^29.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }
