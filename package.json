@@ -37,7 +37,7 @@
     "menus": {
       "editor/title": [
         {
-          "when": "resourceFilename =~ /.*\\.svl/",
+          "when": "editorLangId == plaintext || resourceFilename =~ /.*\\.svl/",
           "command": "svl-vector-beautifier.beautify",
           "group": "navigation"
         }
@@ -45,14 +45,21 @@
     },
     "commands": [
       {
-        "title": "svl-vector-beautifier.beautify",
+        "title": "Beautify Vector",
         "command": "svl-vector-beautifier.beautify",
-        "icon": "$(array)"
+        "icon": "$(bracket-dot)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "svl-vector-beautifier.beautify",
+        "key": "shift+alt+f",
+        "mac": "shift+cmd+f"
       }
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "npm run test && npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "lint": "eslint src",

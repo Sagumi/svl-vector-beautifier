@@ -60,5 +60,5 @@ export default function parse(text: string, indentationIncrement = 2, indentatio
     }
 
 
-    return result += '\n';
+    return result;
 }

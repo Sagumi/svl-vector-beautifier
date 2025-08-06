@@ -1,71 +1,29 @@
-# svl-vector-beautifier README
-
-This is the README for your extension "svl-vector-beautifier". After writing up a brief description, we recommend including the following sections.
+# README
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Simple extension that provides a utility to beautify SVL vectors, making them more human readable.
 
-For example if there is an image subfolder under your extension project workspace:
+## How to Use
+1. Open a `.svl` or `.txt` file
+2. Paste the vector to beautify
+3. Hit the Beautify button <img align=center src="./img/screenshot.jpg"/>
+4. Alternatively, hit `Shift+Alt+f` (`Shift+Cmd+f` on MacOS)
 
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Configuration
+The extension can be configured to your preference by specifying:
+* The indentation character - either spaces or tabs (default: spaces)
+* The number of indentation character to user at each indentation level (default: 2)
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+None
 
-## Extension Settings
+### 0.0.1
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+Initial release
 
-For example:
+Adds a `Beautify Vector` button in the navigation bar of svl files. This will assume the entire file only contains svl vector and beautify them.
 
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+### Future improvements
+* Format selected text only

@@ -11,7 +11,7 @@ const validateIndentation = (str: string, expectedIndentationCount: Array<number
 
 const validateLineCount = (str: string, expectedLineCount: number): void => {
     const parsed = parse(str);
-    const lines = [...parsed.matchAll(/\n.*/gm)];
+    const lines = [...parsed.matchAll(/^.*($|\Z)/gm)];
 
     expect(lines).toHaveLength(expectedLineCount);
 };

@@ -1,7 +1,4 @@
 {
-	"files": [
-		"/src/**/*"
-	],
 	"include": [
 		"src/**/*.ts",
 		"src/**/*.js",
@@ -16,12 +13,14 @@
 		"target": "ES2022",
 		"outDir": "out",
 		"lib": [
-			"ES2022"
+			"ES2022",
+			"DOM"
 		],
 		"sourceMap": true,
 		"rootDir": "src",
 		"types": [
-			"jest"
+			"jest",
+			"node"
 		],
 		"strict": true /* enable all strict type-checking options */
 		/* Additional Checks */
