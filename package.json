@@ -1,21 +1,22 @@
 {
   "name": "svl-vector-beautifier",
   "displayName": "SVL Vector Beautifier",
-  "description": "Transform those one-line vectors to multi-line to make them more human readable",
-  "version": "0.0.1",
   "author": {
     "name": "Clément Rochon"
   },
-  "repository": {
-    "url": "https://github.com/Sagumi/svl-vector-beautifier"
-  },
-  "icon": "img/vector-beautifier-gray.png",
+  "publisher": "ClementRochon",
+  "description": "Transform those one-line vectors to multi-line to make them more human readable",
+  "version": "0.0.1",
   "engines": {
     "vscode": "^1.102.0"
   },
   "categories": [
     "Other"
   ],
+  "repository": {
+    "url": "https://github.com/Sagumi/svl-vector-beautifier"
+  },
+  "icon": "img/vector-beautifier-gray.png",
   "type": "commonjs",
   "activationEvents": [],
   "main": "./out/extension.js",
